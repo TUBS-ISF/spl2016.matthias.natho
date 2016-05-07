@@ -14,7 +14,6 @@
 					<feature name="Division">
 						<description>
 							Ermöglicht es Divisionen auszuführen
-							
 						</description>
 					</feature>
 					<feature name="Multiplikation">
@@ -60,7 +59,7 @@
 						</description>
 					</feature>
 				</or>
-				<alt abstract="true" name="User Interface">
+				<alt abstract="true" mandatory="true" name="User Interface">
 					<description>
 						Bietet verschiedene Interfaces an.
 					</description>

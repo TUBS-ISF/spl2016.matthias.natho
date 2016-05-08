@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="Taschenrechner">
+				<description>
+					Featuremodell zu einem Taschenrechner
+				</description>
+				<and abstract="true" mandatory="true" name="Mathematische Funktionen">
+					<description>
+						Bietet gängige Mathematische Funktionen an. Grundrechenarten
+						wie Addition und Subtraktion sind standardmäßig aktiv.
+					</description>
+					<feature name="Division">
+						<description>
+							Ermöglicht es Divisionen auszuführen
+						</description>
+					</feature>
+					<feature name="Multiplikation">
+						<description>
+							Erlaubt es Multiplikationen auszuführen
+						</description>
+					</feature>
+					<feature name="Exponential-Rechnung">
+						<description>
+							Erlaubt es einfache exponentielle Berechnungen bspw. x^2 auszuführen
+						</description>
+					</feature>
+					<feature mandatory="true" name="AdditionSubtraktion">
+						<description>
+							Ermöglicht es Addtitionen und Subtraktionen auszuführen
+							Dies ist ein Basisfeature, welches immer inbegriffen ist.
+						</description>
+					</feature>
+					<feature name="ZahlenformatUmrech">
+						<description>
+							Erlaubt es Zahlen zwischen verschiedenen Zahlensystemen
+							umrechnen zu lassen. Bspw. die Zahl 10 (Dezimal) nach 
+							Binär (1010) umrechnen zu lassen. Diese Funktion arbeitet mit
+							dem Dezimal-,Binär- und Hexadezimalsystem
+						</description>
+					</feature>
+				</and>
+				<or abstract="true" name="Logging">
+					<description>
+						Bietet verschiedene Formen des Logging an um die durchgeführten
+						Berechnungen zu protokollieren.
+					</description>
+					<feature mandatory="true" name="Dateilogging">
+						<description>
+							Ermöglicht es sämtliche Ausgaben des Taschenrechners in einer
+							Datei mitloggen zu lassen. Dateiformat ist .txt
+						</description>
+					</feature>
+					<feature mandatory="true" name="InGUI">
+						<description>
+							Zeigt in der GUI (sofern aktiviert) die Historie (alle Berechnungen)
+							 an.
+						</description>
+					</feature>
+				</or>
+				<alt abstract="true" mandatory="true" name="User Interface">
+					<description>
+						Bietet verschiedene Interfaces an.
+					</description>
+					<alt abstract="true" mandatory="true" name="GUI">
+						<description>
+							
+						</description>
+						<feature mandatory="true" name="Basis">
+							<description>
+								Bietet die Basisansicht für einen Taschenrechner. Diese Ansicht
+								beinhaltet nur die Grundrechenarten (sofern alle aktiviert sind).
+								Exponentielle Funktionen werden bspw. nicht angezeigt !
+							</description>
+						</feature>
+						<feature mandatory="true" name="Wissenschaftlich">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="Programmierer">
+							<description>
+								Spezielle Ansicht, in der mit anderen Zahlensystemen (Binär oder
+								Hexadezimal) gearbeitet werden kann,
+							</description>
+						</feature>
+					</alt>
+					<feature mandatory="true" name="Terminal">
+						<description>
+							Bietet nur die Eingabe/Ausgabe über ein Terminal an.
+						</description>
+					</feature>
+					<feature mandatory="true" name="Webinterface">
+						<description>
+							Bietet als Interface eine Webseite, in welcher die Eingabe/
+							Ausgabe erfolgt.
+						</description>
+					</feature>
+				</alt>
+				<alt abstract="true" mandatory="true" name="Zahlensysteme">
+					<description>
+						Bietet die Möglichkeit ein Zahlensystem auszuwählen, mit welchem 
+						die Eingabe/Ausgabe erfolgen soll bzw, mit dem gerechnet werden
+						soll. (Da irgendein Zahlensystem gewählt werden muss, ist dies
+						ein Mandatory Feature)
+					</description>
+					<feature mandatory="true" name="Dezimal">
+						<description>
+							Arbeitet mit dem Dezimalsystem
+						</description>
+					</feature>
+					<feature mandatory="true" name="Binär">
+						<description>
+							Arbeitet mir dem Binärsystem.
+						</description>
+					</feature>
+					<feature mandatory="true" name="Hexadezimal">
+						<description>
+							Arbeitet mit dem Hexadezimalsystem
+						</description>
+					</feature>
+				</alt>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<var>Programmierer</var>
+					<disj>
+						<var>Binär</var>
+						<var>Hexadezimal</var>
+					</disj>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<disj>
+						<var>Basis</var>
+						<var>Wissenschaftlich</var>
+					</disj>
+					<var>Dezimal</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>InGUI</var>
+					<var>GUI</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>Wissenschaftlich</var>
+					<var>Exponential-Rechnung</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

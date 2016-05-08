@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;configs&apos;&#x0A;- Original project: &apos;Matthias_Natho-Task1&apos;&#x0A;- Destination element: &apos;configs&apos;&#x0A;- Original elements:&#x0A;     Config-4.config&#x0A;     Config-2.config&#x0A;     Config-5.config&#x0A;     Config-3.config" description="Copy files" element1="configs/Config-4.config" element2="configs/Config-2.config" element3="configs/Config-5.config" element4="configs/Config-3.config" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1462729588629" target="/Matthias_Natho_Task2/configs" units="0" version="1.0"/>
+</session>

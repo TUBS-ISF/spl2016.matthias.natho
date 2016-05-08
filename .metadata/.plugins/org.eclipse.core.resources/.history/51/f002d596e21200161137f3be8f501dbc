@@ -1,0 +1,8 @@
+
+public class UserInterfaceTerminal {
+	
+	if(PropertyManager.getProperty("Terminal")){
+		
+	}
+
+}

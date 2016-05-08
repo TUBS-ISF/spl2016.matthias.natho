@@ -1,0 +1,31 @@
+
+public class MathRueckgabe {
+	
+	private int zahlEins;
+	private int zahlZwei;
+	private MathOps typ;
+	
+	public MathRueckgabe(){
+		zahlEins = 0;
+		zahlZwei = 0;
+		typ = MathOps.Fehler;
+	}
+	
+	public MathRueckgabe(int zahleins, int zahlzwei, MathOps typ){
+		this.zahlEins = zahleins;
+		this.zahlZwei = zahlzwei;
+		this.typ = typ;
+	}
+	
+	public int getZahlEins() {
+		return zahlEins;
+	}
+
+	public int getZahlZwei() {
+		return zahlZwei;
+	}
+
+	public MathOps getTyp() {
+		return typ;
+	}
+}

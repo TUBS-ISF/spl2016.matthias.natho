@@ -1,0 +1,8 @@
+
+public class UnsupportedFeatureException extends Exception {
+	
+	UnsupportedFeatureException(){
+		
+	}
+
+}

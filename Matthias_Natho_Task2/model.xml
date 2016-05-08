@@ -21,7 +21,7 @@
 							Erlaubt es Multiplikationen auszuführen
 						</description>
 					</feature>
-					<feature name="Exponential-Rechnung">
+					<feature abstract="true" name="Exponential-Rechnung">
 						<description>
 							Erlaubt es einfache exponentielle Berechnungen bspw. x^2 auszuführen
 						</description>
@@ -32,7 +32,7 @@
 							Dies ist ein Basisfeature, welches immer inbegriffen ist.
 						</description>
 					</feature>
-					<feature name="ZahlenformatUmrech">
+					<feature abstract="true" name="ZahlenformatUmrech">
 						<description>
 							Erlaubt es Zahlen zwischen verschiedenen Zahlensystemen
 							umrechnen zu lassen. Bspw. die Zahl 10 (Dezimal) nach 
@@ -46,13 +46,13 @@
 						Bietet verschiedene Formen des Logging an um die durchgeführten
 						Berechnungen zu protokollieren.
 					</description>
-					<feature mandatory="true" name="Dateilogging">
+					<feature abstract="true" mandatory="true" name="Dateilogging">
 						<description>
 							Ermöglicht es sämtliche Ausgaben des Taschenrechners in einer
 							Datei mitloggen zu lassen. Dateiformat ist .txt
 						</description>
 					</feature>
-					<feature mandatory="true" name="InGUI">
+					<feature abstract="true" mandatory="true" name="InGUI">
 						<description>
 							Zeigt in der GUI (sofern aktiviert) die Historie (alle Berechnungen)
 							 an.
@@ -74,12 +74,12 @@
 								Exponentielle Funktionen werden bspw. nicht angezeigt !
 							</description>
 						</feature>
-						<feature mandatory="true" name="Wissenschaftlich">
+						<feature abstract="true" mandatory="true" name="Wissenschaftlich">
 							<description>
 								
 							</description>
 						</feature>
-						<feature mandatory="true" name="Programmierer">
+						<feature abstract="true" mandatory="true" name="Programmierer">
 							<description>
 								Spezielle Ansicht, in der mit anderen Zahlensystemen (Binär oder
 								Hexadezimal) gearbeitet werden kann,
@@ -91,7 +91,7 @@
 							Bietet nur die Eingabe/Ausgabe über ein Terminal an.
 						</description>
 					</feature>
-					<feature mandatory="true" name="Webinterface">
+					<feature abstract="true" mandatory="true" name="Webinterface">
 						<description>
 							Bietet als Interface eine Webseite, in welcher die Eingabe/
 							Ausgabe erfolgt.
@@ -110,12 +110,12 @@
 							Arbeitet mit dem Dezimalsystem
 						</description>
 					</feature>
-					<feature mandatory="true" name="Binär">
+					<feature abstract="true" mandatory="true" name="Binär">
 						<description>
 							Arbeitet mir dem Binärsystem.
 						</description>
 					</feature>
-					<feature mandatory="true" name="Hexadezimal">
+					<feature abstract="true" mandatory="true" name="Hexadezimal">
 						<description>
 							Arbeitet mit dem Hexadezimalsystem
 						</description>

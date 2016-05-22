@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-
+//#if Terminal
 public class UserInterfaceTerminal {
 	
 	public void terminalInterfacestarten(){
@@ -44,3 +44,4 @@ public class UserInterfaceTerminal {
 	}
 
 }
+//#endif

@@ -7,6 +7,7 @@ import framework.GUI;
 import framework.MathOps;
 import framework.MathematischeFunktionen;
 import framework.UnsupportedFeatureException;
+import properties.PropertyManager;
 
 public class CalculatorPlugin implements framework.GUIPlugin {
 
@@ -36,13 +37,21 @@ public class CalculatorPlugin implements framework.GUIPlugin {
 	@Override
 	public boolean getMultiplicationActive() {
 		// TODO Auto-generated method stub
-		return false;
+		if(PropertyManager.getProperty("Multiplikation")){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	@Override
 	public boolean getDivionActive() {
 		// TODO Auto-generated method stub
-		return false;
+		if(PropertyManager.getProperty("Division")){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	@Override

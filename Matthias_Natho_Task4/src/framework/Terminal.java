@@ -1,0 +1,58 @@
+package framework;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import properties.PropertyManager;
+
+public class Terminal {
+	
+	private TerminalPlugin plugin;
+	private String mathematischeGleichung;
+	
+	public Terminal(TerminalPlugin einPlugin){
+		plugin = einPlugin;
+	}
+	
+	public void terminalInterfacestarten(){
+		
+		System.out.println("Bitte Gleichung eingeben: (Form: x + Y)");
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		try {
+			mathematischeGleichung = in.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(mathematischeGleichung != null){
+			plugin.rechne(mathematischeGleichung);
+			
+//			int ergebnis = 0;
+//			MathRueckgabe bestandteile = Hilfsmethoden.stringAuslesen(input);
+//			try{
+//			switch (bestandteile.getTyp()) {
+//			case Plus : ergebnis = MathematischeFunktionen.addieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
+//						break;
+//			case Minus : 	ergebnis = MathematischeFunktionen.subtrahieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
+//						break;
+//			case Mal :	ergebnis = MathematischeFunktionen.multiplizieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
+//						break;
+//			case Geteilt :	ergebnis = MathematischeFunktionen.dividieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
+//						break;
+//			default: 	System.err.println("Keine Eingabe erkannt !");
+//							return;
+//			}
+//			System.out.println("Ergebnis ist: " + ergebnis);
+//			} catch(UnsupportedFeatureException exp){
+//				System.err.println(exp.getMessage());
+//			}
+			
+		}else{
+			System.err.println("Keine Eingabe erkannt !");
+			return;
+		}
+	}
+
+}

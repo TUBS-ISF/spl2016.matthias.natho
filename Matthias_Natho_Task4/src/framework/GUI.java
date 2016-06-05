@@ -194,27 +194,6 @@ public class GUI {
 		
 	}
 	
-//	class GleichListener implements ActionListener{
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			if(operation != MathOps.Fehler){
-//				zahlZwei = new Integer(textField.getText());
-//				rechnen();
-//			} else{
-//				textField.setText("Fehler: bitte Rechenart auswählen !");
-//				try {
-//					Thread.sleep(2000);
-//				} catch (InterruptedException e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				}
-//				textField.setText("");
-//			}
-//			
-//		}
-//		
-//	}
-	
 	private int rechnen(){
 		int ergebnis = 0;
 		try{

@@ -17,15 +17,35 @@ public class GUI {
 
 	private JFrame frame;
 	private JTextField textField;
+	public JTextField getTextField() {
+		return textField;
+	}
+
 	private int zahlEins;
 	private int zahlZwei;
-	private MathOps operation;
-	private Plugin plugin;
+	public int getZahlEins() {
+		return zahlEins;
+	}
+
+	public int getZahlZwei() {
+		return zahlZwei;
+	}
+	
+	public void setZahlZwei(int zahl) {
+		zahlZwei = zahl;
+	}
+
+	public MathOps getOperation() {
+		return operation;
+	}
+
+	public MathOps operation;
+	private GUIPlugin plugin;
 
 	/**
 	 * Create the application.
 	 */
-	public GUI(Plugin p) {
+	public GUI(GUIPlugin p) {
 		plugin = p;
 		initialize();
 		zahlEins = 0;
@@ -34,15 +54,15 @@ public class GUI {
 	}
 	
 	public void starteGui(){
-		EventQueue.invokeLater(new Runnable() {
+		/*EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
+				try {*/
 					frame.setVisible(true);
-				} catch (Exception e) {
+				/*} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
-		});
+		});*/
 	}
 
 	/**
@@ -60,8 +80,9 @@ public class GUI {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
+		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		JButton btnNewButton = new JButton("=");
-		btnNewButton.addActionListener(new GleichListener());
+		btnNewButton.addActionListener(plugin.getGleichListener());
 		btnNewButton.setBounds(444, 75, 75, 29);
 		frame.getContentPane().add(btnNewButton);
 		
@@ -173,26 +194,26 @@ public class GUI {
 		
 	}
 	
-	class GleichListener implements ActionListener{
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			if(operation != MathOps.Fehler){
-				zahlZwei = new Integer(textField.getText());
-				rechnen();
-			} else{
-				textField.setText("Fehler: bitte Rechenart auswählen !");
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				textField.setText("");
-			}
-			
-		}
-		
-	}
+//	class GleichListener implements ActionListener{
+//		@Override
+//		public void actionPerformed(ActionEvent e) {
+//			if(operation != MathOps.Fehler){
+//				zahlZwei = new Integer(textField.getText());
+//				rechnen();
+//			} else{
+//				textField.setText("Fehler: bitte Rechenart auswählen !");
+//				try {
+//					Thread.sleep(2000);
+//				} catch (InterruptedException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				}
+//				textField.setText("");
+//			}
+//			
+//		}
+//		
+//	}
 	
 	private int rechnen(){
 		int ergebnis = 0;

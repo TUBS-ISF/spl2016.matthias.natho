@@ -45,6 +45,8 @@ public class Hilfsmethoden {
 			case "/" :	return MathOps.Geteilt;
 			
 			case "x^y" : return MathOps.Exponent;
+			
+			case "ToBin" : return MathOps.Format;
 						
 			default: 	return MathOps.Fehler;						
 			}

@@ -20,6 +20,7 @@ public class GUI {
 	JButton buttonMulti;
 	JButton buttonDivi;
 	JButton buttonExpon;
+	JButton buttonUmrechn;
 
 	/**
 	 * Create the application.
@@ -89,6 +90,13 @@ public class GUI {
 		buttonExpon = btnNewButton_4;
 		frame.getContentPane().add(btnNewButton_4);
 		buttonExpon.setEnabled(false);
+		
+		JButton btnTobin = new JButton("ToBin");
+		btnTobin.setBounds(163, 75, 75, 29);
+		buttonUmrechn = btnTobin;
+		frame.getContentPane().add(btnTobin);
+		btnTobin.addActionListener(new MathOpsListener());
+		buttonUmrechn.setEnabled(false);
 		
 		JButton button = new JButton("*");
 		button.setBounds(444, 200, 75, 29);
@@ -175,7 +183,11 @@ public class GUI {
 			JButton temp = (JButton) e.getSource();
 			zahlEins = new Integer(textField.getText());
 			operation = Hilfsmethoden.castStringToEnum(temp.getText());
-			textField.setText("");			
+			textField.setText("");
+			// Zahlenformat umrechnen hat nur einen Parameter, deshalb hier bereits rechnen !
+			if(operation == MathOps.Format){
+				rechnen();
+			}
 		}
 		
 	}
@@ -216,6 +228,8 @@ public class GUI {
 			case Geteilt :	textField.setText("" + Rechner.dividieren(zahlEins, zahlZwei));
 						break;
 			case Exponent : textField.setText("" + Rechner.potenz(zahlEins, zahlZwei) );
+						break;
+			case Format : textField.setText("" + Rechner.formatUmrech(zahlEins) );
 						break;
 			default: 	System.err.println("Keine Eingabe erkannt !");
 						

@@ -1,6 +1,7 @@
 /GUI.java
 /Hilfsmethoden.java
 /MathOps.java
+/.gitignore
 /MathRueckgabe.java
 /MathematischeFunktionen.java
 /UnsupportedFeatureException.java

@@ -32,7 +32,7 @@
 							Dies ist ein Basisfeature, welches immer inbegriffen ist.
 						</description>
 					</feature>
-					<feature abstract="true" name="ZahlenformatUmrech">
+					<feature name="ZahlenformatUmrech">
 						<description>
 							Erlaubt es Zahlen zwischen verschiedenen Zahlensystemen
 							umrechnen zu lassen. Bspw. die Zahl 10 (Dezimal) nach 

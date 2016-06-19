@@ -153,8 +153,12 @@ public class GUI {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton_4.setBounds(223, 75, 117, 29);
+		btnNewButton_4.setBounds(250, 75, 75, 29);
 		frame.getContentPane().add(btnNewButton_4);
+		
+		JButton btnTobin = new JButton("ToBin");
+		btnTobin.setBounds(163, 75, 75, 29);
+		frame.getContentPane().add(btnTobin);
 		button_10.addActionListener(new NumberListener());
 	}
 	

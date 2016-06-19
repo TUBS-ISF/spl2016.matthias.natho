@@ -28,4 +28,8 @@ public class MathematischeFunktionen {
 	public  int potenz(int zahlEins, int zahlZwei) throws UnsupportedFeatureException{
 			throw new UnsupportedFeatureException("Exponentialrechnung");	
 	}
+	
+	public  String formatUmrech(int zahlEins) throws UnsupportedFeatureException{
+		throw new UnsupportedFeatureException("FormatUmrechnen");	
+}
 }

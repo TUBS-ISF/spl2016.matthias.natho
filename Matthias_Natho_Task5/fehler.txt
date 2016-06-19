@@ -1,0 +1,4 @@
+Hier die Fehler bzw. Probleme, welche bei der Bearbeitung von Aufg. 5 auftraten:
+
+ - Wurde für das Projekt der AHEAD Composer gewählt, brachte dies den Rechner beinahe zum Absturz. Die CPU Auslastung stieg sehr stark an und Eclipse war nicht mehr bedienbar.
+ - Reihenfolge der Feature: Es musste des öfteren die Reihenfolge der ausgewählten Features in den Configs angepasst werden, da ansonsten ein anderes Verhalten auftrat. Zudem wird diese Reihenfolge jedesmal wieder verändert, wenn man die Config wechselt !

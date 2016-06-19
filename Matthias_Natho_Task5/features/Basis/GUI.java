@@ -195,15 +195,16 @@ public class GUI {
 	
 	private int rechnen(){
 		int ergebnis = 0;
+		MathematischeFunktionen Rechner = new MathematischeFunktionen();
 		try{
 			switch (operation) {
-			case Plus : textField.setText("" + MathematischeFunktionen.addieren(zahlEins, zahlZwei));
+			case Plus : textField.setText("" + Rechner.addieren(zahlEins, zahlZwei));
 						break;
-			case Minus : textField.setText("" + MathematischeFunktionen.subtrahieren(zahlEins, zahlZwei));
+			case Minus : textField.setText("" + Rechner.subtrahieren(zahlEins, zahlZwei));
 						break;
-			case Mal :	textField.setText("" + MathematischeFunktionen.multiplizieren(zahlEins, zahlZwei));
+			case Mal :	textField.setText("" + Rechner.multiplizieren(zahlEins, zahlZwei));
 						break;
-			case Geteilt :	textField.setText("" + MathematischeFunktionen.dividieren(zahlEins, zahlZwei));
+			case Geteilt :	textField.setText("" + Rechner.dividieren(zahlEins, zahlZwei));
 						break;
 			default: 	System.err.println("Keine Eingabe erkannt !");
 						

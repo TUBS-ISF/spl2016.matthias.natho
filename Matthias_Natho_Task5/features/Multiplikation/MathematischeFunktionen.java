@@ -1,6 +1,6 @@
 public class MathematischeFunktionen {	
 	
-	public static int multiplizieren(int zahlEins, int zahlZwei) {
+	public int multiplizieren(int zahlEins, int zahlZwei) {
 			return zahlEins * zahlZwei;	
 	}
 

@@ -21,15 +21,16 @@ public class UserInterfaceTerminal {
 		if(input != null){
 			int ergebnis = 0;
 			MathRueckgabe bestandteile = Hilfsmethoden.stringAuslesen(input);
+			MathematischeFunktionen Rechner = new MathematischeFunktionen();
 			try{
 			switch (bestandteile.getTyp()) {
-			case Plus : ergebnis = MathematischeFunktionen.addieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
+			case Plus : ergebnis = Rechner.addieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
 						break;
-			case Minus : 	ergebnis = MathematischeFunktionen.subtrahieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
+			case Minus : 	ergebnis = Rechner.subtrahieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
 						break;
-			case Mal :	ergebnis = MathematischeFunktionen.multiplizieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
+			case Mal :	ergebnis = Rechner.multiplizieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
 						break;
-			case Geteilt :	ergebnis = MathematischeFunktionen.dividieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
+			case Geteilt :	ergebnis = Rechner.dividieren(bestandteile.getZahlEins(), bestandteile.getZahlZwei());
 						break;
 			default: 	System.err.println("Keine Eingabe erkannt !");
 							return;

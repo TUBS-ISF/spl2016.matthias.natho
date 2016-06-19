@@ -24,4 +24,8 @@ public class MathematischeFunktionen {
 			throw new UnsupportedFeatureException("Division");
 		//}
 	}
+	
+	public  int potenz(int zahlEins, int zahlZwei) throws UnsupportedFeatureException{
+			throw new UnsupportedFeatureException("Exponentialrechnung");	
+	}
 }

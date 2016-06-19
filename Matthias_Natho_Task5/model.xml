@@ -21,7 +21,7 @@
 							Erlaubt es Multiplikationen auszuführen
 						</description>
 					</feature>
-					<feature abstract="true" name="Exponential-Rechnung">
+					<feature name="Exponential-Rechnung">
 						<description>
 							Erlaubt es einfache exponentielle Berechnungen bspw. x^2 auszuführen
 						</description>

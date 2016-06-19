@@ -147,6 +147,14 @@ public class GUI {
 		JButton button_10 = new JButton("9");
 		button_10.setBounds(337, 118, 75, 29);
 		frame.getContentPane().add(button_10);
+		
+		JButton btnNewButton_4 = new JButton("x^y");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_4.setBounds(223, 75, 117, 29);
+		frame.getContentPane().add(btnNewButton_4);
 		button_10.addActionListener(new NumberListener());
 	}
 	

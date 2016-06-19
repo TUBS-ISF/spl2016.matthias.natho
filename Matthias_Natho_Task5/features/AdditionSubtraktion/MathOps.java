@@ -5,6 +5,7 @@ public enum MathOps {
 	Minus,
 	Mal,
 	Geteilt,
+	Exponent,
 	Fehler
 
 }

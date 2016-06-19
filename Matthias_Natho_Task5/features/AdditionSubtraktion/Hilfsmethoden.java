@@ -16,6 +16,7 @@ public class Hilfsmethoden {
 			System.out.println(e.getMessage());
 		}
 		
+		System.out.println("Hilfsmethode aufgerufen: Argument: " + bestandteile[1]);
 		switch (bestandteile[1]) {
 		case "+" : 	rueckgabe.setTyp(MathOps.Plus);
 					break;
@@ -23,7 +24,9 @@ public class Hilfsmethoden {
 					break;
 		case "*" :	rueckgabe.setTyp(MathOps.Mal);
 					break;
-		case "/" :	rueckgabe.setTyp(MathOps.Geteilt);
+		case "/" :  rueckgabe.setTyp(MathOps.Geteilt);
+					break;
+		case "x^y" :  rueckgabe.setTyp(MathOps.Exponent);
 					break;
 		default: 	System.err.println("Keine Eingabe erkannt !");
 					break;
@@ -40,6 +43,8 @@ public class Hilfsmethoden {
 			case "*" :	return MathOps.Mal;
 						
 			case "/" :	return MathOps.Geteilt;
+			
+			case "x^y" : return MathOps.Exponent;
 						
 			default: 	return MathOps.Fehler;						
 			}

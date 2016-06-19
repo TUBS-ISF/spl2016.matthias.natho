@@ -19,6 +19,7 @@ public class GUI {
 	private MathOps operation;
 	JButton buttonMulti;
 	JButton buttonDivi;
+	JButton buttonExpon;
 
 	/**
 	 * Create the application.
@@ -81,6 +82,13 @@ public class GUI {
 		button_2.setBounds(444, 159, 75, 29);
 		frame.getContentPane().add(button_2);
 		button_2.addActionListener(new MathOpsListener());
+		
+		JButton btnNewButton_4 = new JButton("x^y");
+		btnNewButton_4.addActionListener(new MathOpsListener());
+		btnNewButton_4.setBounds(250, 75, 75, 29);
+		buttonExpon = btnNewButton_4;
+		frame.getContentPane().add(btnNewButton_4);
+		buttonExpon.setEnabled(false);
 		
 		JButton button = new JButton("*");
 		button.setBounds(444, 200, 75, 29);
@@ -197,6 +205,7 @@ public class GUI {
 		int ergebnis = 0;
 		MathematischeFunktionen Rechner = new MathematischeFunktionen();
 		try{
+			System.out.println("Rechnen aufgerufen: Operation: "+ operation);
 			switch (operation) {
 			case Plus : textField.setText("" + Rechner.addieren(zahlEins, zahlZwei));
 						break;
@@ -205,6 +214,8 @@ public class GUI {
 			case Mal :	textField.setText("" + Rechner.multiplizieren(zahlEins, zahlZwei));
 						break;
 			case Geteilt :	textField.setText("" + Rechner.dividieren(zahlEins, zahlZwei));
+						break;
+			case Exponent : textField.setText("" + Rechner.potenz(zahlEins, zahlZwei) );
 						break;
 			default: 	System.err.println("Keine Eingabe erkannt !");
 						

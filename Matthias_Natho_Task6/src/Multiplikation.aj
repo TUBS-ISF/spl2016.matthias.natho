@@ -1,8 +1,9 @@
 
 public aspect Multiplikation {
-	// TODO Auto-generated aspect
 	
-	public void test(){
-		System.out.println("Hallo ein Test !");
+	pointcut multiplizieren(int zahlEins, int zahlZwei) : execution(int MathematischeFunktionen.multiplizieren(int, int)) && args(zahlEins, zahlZwei);
+	
+	int around(int zahlEins, int zahlZwei) : multiplizieren(zahlEins, zahlZwei){
+		return zahlEins * zahlZwei;
 	}
 }
